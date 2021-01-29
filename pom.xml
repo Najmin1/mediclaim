@@ -11,17 +11,19 @@
 	</parent>
 	<groupId>com.strikers</groupId>
 	<artifactId>mediclaim</artifactId>
-	<version>0.0.7-SNAPSHOT</version>
+	<version>5.0.0-SNAPSHOT</version>
 	<name>mediclaim</name>
 	<description>Demo project for Spring Boot</description>
+	
+
 
 	<properties>
 		<java.version>1.8</java.version>
-		<sonar.coverage.exclusions>**mediclaim/*,**/config/*,**/entity/*,**/dto/*,**/repository/*,**/exception/*,**/util/*</sonar.coverage.exclusions><sonar.host.url>http://35.198.220.235:9000</sonar.host.url>
-
+		<sonar.coverage.exclusions>**mediclaim/*,**/config/*,**/entity/*,**/dto/*,**/repository/*,**/exception/*,**/util/*</sonar.coverage.exclusions>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.host.url>http://34.121.110.103:9000</sonar.host.url>
-  <sonar.login>admin</sonar.login>
-  <sonar.password>admin123</sonar.password>
+  		<sonar.login>admin</sonar.login>
+  		<sonar.password>admin123</sonar.password>
 	</properties>
 
 	<dependencies>
@@ -72,17 +74,6 @@
 		</dependency>
 	</dependencies>
 
-	
-	<distributionManagement>
-    <snapshotRepository>
-       <id>nexus</id>
-       <url>http://34.121.110.103:8082/repository/maven-snapshots</url>
-    </snapshotRepository>
-    <repository>
-<id>nexus</id>
-<url>https://34.121.110.103:8082/repository/maven-releases</url>
-    </repository>
-	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -111,5 +102,15 @@
 
 		</plugins>
 	</build>
+	<distributionManagement>
+    <snapshotRepository>
+       <id>nexus</id>
+       <url>http://34.121.110.103:8082/repository/maven-snapshots</url>
+    </snapshotRepository>
+    <repository>
+<id>nexus</id>
+<url>http://34.121.110.103:8082/repository/maven-releases</url>
+    </repository>
+  </distributionManagement>
 
 </project>
